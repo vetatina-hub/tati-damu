@@ -66,7 +66,11 @@
   .brand-text{color:var(--gold-soft); line-height:1.15;}
   .brand-text .name{font-family:'Cormorant Garamond', serif; font-size:21px; font-weight:600; letter-spacing:0.06em; color:var(--ink);}
   .brand-text .sub{font-family:'IBM Plex Mono', monospace; font-size:9px; letter-spacing:0.14em; color:var(--gold-soft); text-transform:uppercase;}
-  nav{display:flex; gap:26px; font-size:14px;}
+  nav{display:flex; gap:15px; font-size:13.5px;}
+  nav a{white-space:nowrap;}
+  .brand{flex-shrink:0;} .brand-text .name{white-space:nowrap;}
+  @media (max-width:1340px){ .header-cta{display:none;} }
+  @media (max-width:860px){ .brand{flex-shrink:1;} .brand-text .sub{font-size:8px;} }
   nav a{text-decoration:none; color:#aab5d2; transition:color .2s;}
   nav a:hover{color:var(--gold-soft);}
   .header-right{display:flex; align-items:center; gap:16px;}
@@ -215,6 +219,55 @@
     .nav-toggle{display:block;}
     .header-cta{display:none;}
   }
+
+  #finance{background:linear-gradient(180deg, var(--navy-deep), var(--navy));}
+  #finance .section-head p{color:var(--ink-soft);}
+  .fin-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .fin-card .tag{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; color:var(--gold); margin-bottom:10px; text-transform:uppercase;}
+  .fin-card h3{font-size:25px; margin-bottom:12px;}
+  .fin-card p{color:var(--ink-soft); font-size:15px;}
+  .fin-use{margin-top:16px; font-size:14px; color:var(--gold-soft);}
+  .fin-sub{font-size:clamp(24px,3vw,32px); margin:64px 0 26px;}
+  .fin-steps{list-style:none; display:grid; gap:0; border-top:1px solid var(--hair);}
+  .fin-steps li{display:grid; grid-template-columns:56px 1fr; gap:18px; padding:20px 0; border-bottom:1px solid var(--hair);}
+  .fin-steps .n{font-family:'IBM Plex Mono', monospace; color:var(--gold); font-size:14px; padding-top:3px;}
+  .fin-steps b{font-weight:600; font-size:17px; color:var(--ink);}
+  .fin-steps p{color:var(--ink-soft); font-size:15px; margin-top:4px;}
+  .fin-steps.compact{border-top:none;}
+  .fin-steps.compact li{padding:14px 0;}
+  .fin-steps.compact li:last-child{border-bottom:none;}
+  .fin-combo{margin-top:26px;}
+  .fin-disclaimer{margin-top:36px; font-size:13px; color:#8a97b8; max-width:820px;}
+  @media (max-width: 860px){ .fin-grid{grid-template-columns:1fr;} }
+
+  .fin-lead{color:var(--ink-soft); max-width:720px; margin:-12px 0 28px;}
+  .chip{display:inline-block; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em; padding:3px 9px; border:1px solid; margin:0 6px 6px 0; white-space:nowrap;}
+  .r-c{color:#9fd3ff; border-color:rgba(159,211,255,0.45);}
+  .r-t{color:var(--navy-deep); background:linear-gradient(160deg, var(--gold-soft), var(--gold)); border-color:var(--gold);}
+  .r-i{color:#c9b6ff; border-color:rgba(201,182,255,0.45);}
+  .r-b{color:#9fe3c4; border-color:rgba(159,227,196,0.45);}
+  .r-s{color:#ffc9a8; border-color:rgba(255,201,168,0.45);}
+  .party-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--gold-line); border:1px solid var(--gold-line);}
+  .party-card{background:var(--navy-panel); padding:22px 18px;}
+  .party-card h4{font-family:'Cormorant Garamond', serif; font-size:20px; font-weight:600; margin:8px 0 12px; line-height:1.15;}
+  .party-card ul{list-style:none;}
+  .party-card li{font-size:13.5px; color:var(--ink-soft); padding:7px 0; border-top:1px solid var(--hair); line-height:1.45;}
+  .flows{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px;}
+  .flow-item{border:1px solid var(--gold-line); padding:16px 18px; background:linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0));}
+  .flow-k{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);}
+  .flow-v{font-size:15px; color:var(--ink); margin-top:6px;}
+  .journey{list-style:none; position:relative;}
+  .journey li{display:grid; grid-template-columns:64px 1fr; gap:20px; position:relative; padding-bottom:28px;}
+  .journey li::before{content:""; position:absolute; left:21px; top:46px; bottom:0; width:1px; background:var(--gold-line);}
+  .journey li:last-child::before{display:none;}
+  .j-n{width:44px; height:44px; border:1px solid var(--gold); color:var(--gold-soft); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono', monospace; font-size:13px; background:var(--navy-deep);}
+  .j-body{background:var(--navy-panel); border:1px solid var(--hair); padding:20px 24px;}
+  .j-body h4{font-family:'Cormorant Garamond', serif; font-size:23px; font-weight:600; margin:4px 0 8px;}
+  .j-body p{color:var(--ink-soft); font-size:15px;}
+  .j-x{margin-top:12px; padding-top:10px; border-top:1px dashed var(--gold-line); font-size:13.5px; color:#8a97b8;}
+  .j-x b{color:var(--gold-soft); font-weight:500;}
+  @media (max-width: 1000px){ .party-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width: 860px){ .party-grid, .flows{grid-template-columns:1fr;} .journey li{grid-template-columns:48px 1fr; gap:12px;} .journey li::before{left:21px;} }
 </style>
 </head>
 <body>
@@ -230,7 +283,7 @@
       <a href="#services" data-i18n="nav.services">Услуги</a>
       <a href="#sourcing" data-i18n="nav.sourcing">Sourcing</a>
       <a href="#portfolio" data-i18n="nav.portfolio">Товары</a>
-      <a href="#testimonial" data-i18n="nav.testimonial">Отзывы</a>
+      <a href="#finance" data-i18n="nav.finance">Финансирование</a>
       <a href="#logistics" data-i18n="nav.logistics">Логистика</a>
       <a href="#contact" data-i18n="nav.contact">Контакты</a>
     </nav>
@@ -398,17 +451,168 @@
   </div>
 </section>
 
-<section id="testimonial">
+<section id="finance">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-num" data-i18n="testimonial.num">05 — Отзывы</div>
-      <h2 data-i18n="testimonial.h2">Нам доверяют</h2>
+      <div class="section-num" data-i18n="finance.num">05 — Trade Finance</div>
+      <h2 data-i18n="finance.h2">Финансовые инструменты в экспортной сделке</h2>
+      <p data-i18n="finance.p">Покупатель хочет получить товар до оплаты, продавец — деньги до отгрузки. Банковские инструменты снимают это противоречие: обязательство платить берёт на себя банк. Мы помогаем подобрать инструмент под сделку и организовать его выпуск через партнёрские финансовые учреждения.</p>
     </div>
-    <div class="testimonial-card">
-      <div class="quote-mark">&ldquo;</div>
-      <p class="testimonial-text" data-i18n="testimonial.quote">Обратились с запросом на поставку продовольственных товаров — быстро подобрали поставщика и понятно объяснили каждый шаг сделки. Именно такого структурного подхода не хватало раньше.</p>
-      <div class="testimonial-author" data-i18n="testimonial.author">— Клиент компании, импорт продовольственных товаров</div>
+    <div class="fin-grid">
+      <div class="process-card fin-card">
+        <div class="tag">Letter of Credit (LC)</div>
+        <h3 data-i18n="finance.lc.h">Документарный аккредитив</h3>
+        <p data-i18n="finance.lc.d">Банк покупателя обязуется заплатить продавцу, как только тот представит документы об отгрузке, точно соответствующие условиям аккредитива. Банк проверяет документы, а не сам товар.</p>
+        <div class="fin-use" data-i18n="finance.lc.use">Основной способ оплаты в экспорте зерна и масла</div>
+        <div class="process-note" data-i18n="finance.lc.swift">SWIFT MT700 · правила UCP 600</div>
+      </div>
+      <div class="process-card fin-card">
+        <div class="tag">Standby Letter of Credit (SBLC)</div>
+        <h3 data-i18n="finance.sblc.h">Резервный аккредитив</h3>
+        <p data-i18n="finance.sblc.d">Страховка на случай неоплаты. Покупатель платит сам по контракту, а если не заплатил — продавец предъявляет требование и получает деньги от банка. Если сделка прошла нормально, SBLC просто не используется.</p>
+        <div class="fin-use" data-i18n="finance.sblc.use">Позволяет работать без 100% предоплаты</div>
+        <div class="process-note" data-i18n="finance.sblc.swift">SWIFT MT760 · правила ISP98 или UCP 600</div>
+      </div>
+      <div class="process-card fin-card">
+        <div class="tag">Bank Guarantee (BG)</div>
+        <h3 data-i18n="finance.bg.h">Банковская гарантия</h3>
+        <p data-i18n="finance.bg.d">Обязательство банка возместить убыток, если сторона не выполнила условие контракта. Виды: гарантия исполнения контракта (performance bond), гарантия возврата аванса, тендерная гарантия.</p>
+        <div class="fin-use" data-i18n="finance.bg.use">Защищает покупателя: поставка, качество, аванс</div>
+        <div class="process-note" data-i18n="finance.bg.swift">SWIFT MT760 · правила URDG 758</div>
+      </div>
     </div>
+    <h3 class="fin-sub" data-i18n="finance.parties.h">Участники и их обязательства</h3>
+    <p class="fin-lead" data-i18n="finance.parties.p">В каждой сделке с инструментом пять сторон. У каждой — своя зона ответственности, закреплённая в договорах и в тексте самого инструмента.</p>
+    <div class="party-grid">
+      <div class="party-card"><span class="chip r-c" data-i18n="role.c">Клиент</span>
+        <h4 data-i18n="party.c.h">Клиент (заявитель)</h4><ul>
+          <li data-i18n="party.c.l1">Даёт достоверные документы и сведения о сделке</li>
+          <li data-i18n="party.c.l2">Оплачивает выпуск по инвойсу эмитента</li>
+          <li data-i18n="party.c.l3">Исполняет свой торговый контракт</li>
+          <li data-i18n="party.c.l4">Если получатель предъявил требование — возмещает выплату эмитенту по условиям договора</li>
+        </ul></div>
+      <div class="party-card"><span class="chip r-t" data-i18n="role.t">TATI-DAMU</span>
+        <h4 data-i18n="party.t.h">TATI-DAMU (консультант)</h4><ul>
+          <li data-i18n="party.t.l1">Анализирует сделку и подбирает инструмент</li>
+          <li data-i18n="party.t.l2">Собирает и передаёт документы эмитенту</li>
+          <li data-i18n="party.t.l3">Сопровождает согласование до выпуска</li>
+          <li data-i18n="party.t.l4">Не принимает деньги за выпуск и хранит конфиденциальность</li>
+        </ul></div>
+      <div class="party-card"><span class="chip r-i" data-i18n="role.i">Эмитент</span>
+        <h4 data-i18n="party.i.h">Финансовое учреждение и банк-эмитент</h4><ul>
+          <li data-i18n="party.i.l1">Проводит проверку клиента (KYC / AML)</li>
+          <li data-i18n="party.i.l2">Готовит проект текста, договор и официальный инвойс</li>
+          <li data-i18n="party.i.l3">Выпускает инструмент по SWIFT</li>
+          <li data-i18n="party.i.l4">Несёт безотзывное обязательство заплатить, если условия инструмента выполнены</li>
+        </ul></div>
+      <div class="party-card"><span class="chip r-b" data-i18n="role.b">Банк получателя</span>
+        <h4 data-i18n="party.b.h">Банк получателя</h4><ul>
+          <li data-i18n="party.b.l1">Принимает сообщение SWIFT</li>
+          <li data-i18n="party.b.l2">Проверяет подлинность инструмента</li>
+          <li data-i18n="party.b.l3">Извещает получателя</li>
+          <li data-i18n="party.b.l4">По аккредитиву — проверяет документы и передаёт их на оплату</li>
+        </ul></div>
+      <div class="party-card"><span class="chip r-s" data-i18n="role.s">Получатель</span>
+        <h4 data-i18n="party.s.h">Получатель (продавец)</h4><ul>
+          <li data-i18n="party.s.l1">Заранее согласует текст инструмента</li>
+          <li data-i18n="party.s.l2">Исполняет контракт: поставка, документы</li>
+          <li data-i18n="party.s.l3">При неоплате или неисполнении — предъявляет требование с документами, указанными в инструменте</li>
+        </ul></div>
+    </div>
+    <div class="flows">
+      <div class="flow-item"><div class="flow-k" data-i18n="flows.doc.k">Документы</div><div class="flow-v" data-i18n="flows.doc.v">Клиент → TATI-DAMU → Эмитент</div></div>
+      <div class="flow-item"><div class="flow-k" data-i18n="flows.money.k">Деньги</div><div class="flow-v" data-i18n="flows.money.v">Клиент → Эмитент / банк, напрямую</div></div>
+      <div class="flow-item"><div class="flow-k" data-i18n="flows.inst.k">Инструмент</div><div class="flow-v" data-i18n="flows.inst.v">Банк-эмитент → Банк получателя → Получатель (SWIFT)</div></div>
+    </div>
+    <h3 class="fin-sub" data-i18n="finance.how.h">Как инструмент работает в торговой сделке</h3>
+    <ol class="fin-steps">
+      <li><span class="n">01</span><div><b data-i18n="finance.step1.t">Контракт</b><p data-i18n="finance.step1.d">Стороны прописывают в контракте форму оплаты и гарантий: LC, SBLC, банковская гарантия или их сочетание.</p></div></li>
+      <li><span class="n">02</span><div><b data-i18n="finance.step2.t">Заявка в банк</b><p data-i18n="finance.step2.d">Покупатель (заявитель) обращается в банк или финансовое учреждение. Эмитент проверяет клиента и согласует текст инструмента со всеми сторонами.</p></div></li>
+      <li><span class="n">03</span><div><b data-i18n="finance.step3.t">Выпуск по SWIFT</b><p data-i18n="finance.step3.d">Банк-эмитент направляет инструмент в банк продавца: MT700 для аккредитива, MT760 для SBLC и гарантий. Банк продавца подтверждает подлинность.</p></div></li>
+      <li><span class="n">04</span><div><b data-i18n="finance.step4.t">Отгрузка и документы</b><p data-i18n="finance.step4.d">Продавец отгружает товар и собирает документы: инвойс, коносамент или ж/д накладную, сертификаты происхождения и качества, фитосанитарный сертификат.</p></div></li>
+      <li><span class="n">05</span><div><b data-i18n="finance.step5.t">Оплата</b><p data-i18n="finance.step5.d">По аккредитиву банк платит после проверки документов. По SBLC покупатель платит сам, а инструмент срабатывает только при неоплате.</p></div></li>
+    </ol>
+    <div class="about-note fin-combo"><p data-i18n="finance.combo">Частая связка: продавец даёт гарантию исполнения контракта, покупатель — аккредитив или SBLC на оплату. Так защищены обе стороны.</p></div>
+    <h3 class="fin-sub" data-i18n="finance.prod.h">Что применяется в наших товарных направлениях</h3>
+    <div class="fin-grid">
+      <div class="process-card fin-card"><h3 data-i18n="finance.prod1.t">Мука</h3><p data-i18n="finance.prod1.d">Регулярные поставки партиями (вагоны, контейнеры) в Центральную Азию, Афганистан и на Ближний Восток. Вместо 100% предоплаты — SBLC в пользу продавца на серию поставок или револьверный аккредитив, который восстанавливается после каждой партии.</p></div>
+      <div class="process-card fin-card"><h3 data-i18n="finance.prod2.t">Пшеница и зерно</h3><p data-i18n="finance.prod2.d">Крупные партии. Типичная схема — аккредитив с оплатой по предъявлении документов (LC at sight). Продавец со своей стороны может дать гарантию исполнения контракта.</p></div>
+      <div class="process-card fin-card"><h3 data-i18n="finance.prod3.t">Подсолнечное масло</h3><p data-i18n="finance.prod3.d">Аккредитив или SBLC на оплату. Для долгосрочных контрактов — револьверный аккредитив на серию поставок, для покупателя — гарантия поставки и качества.</p></div>
+    </div>
+    <h3 class="fin-sub" data-i18n="finance.journey.h">Выпуск инструмента: шаг за шагом</h3>
+    <p class="fin-lead" data-i18n="finance.journey.p">Что происходит, кто участвует и что передаётся на каждом этапе.</p>
+    <ol class="journey">
+      <li><div class="j-n">01</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-c" data-i18n="role.c">Клиент</span><span class="chip r-t" data-i18n="role.t">TATI-DAMU</span></div>
+        <h4 data-i18n="journey.1.t">Заявка и анализ сделки</h4>
+        <p data-i18n="journey.1.d">Клиент описывает сделку: товар, сумму, стороны, нужный инструмент. TATI-DAMU проверяет логику сделки и подбирает тип и срок инструмента.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.1.x">Контракт или проформа-инвойс</b></div>
+      </div></li>
+      <li><div class="j-n">02</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-c" data-i18n="role.c">Клиент</span><span class="chip r-t" data-i18n="role.t">TATI-DAMU</span><span class="chip r-i" data-i18n="role.i">Эмитент</span></div>
+        <h4 data-i18n="journey.2.t">Пакет документов (KYC)</h4>
+        <p data-i18n="journey.2.d">Клиент передаёт документы через TATI-DAMU. Эмитент проводит проверку соответствия требованиям (комплаенс).</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.2.x">Заявка, регистрационные документы, акционеры, паспорта, адрес; от 10 млн USD — выписки за 6 месяцев</b></div>
+      </div></li>
+      <li><div class="j-n">03</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-i" data-i18n="role.i">Эмитент</span><span class="chip r-c" data-i18n="role.c">Клиент</span><span class="chip r-s" data-i18n="role.s">Получатель</span></div>
+        <h4 data-i18n="journey.3.t">Проект текста (драфт)</h4>
+        <p data-i18n="journey.3.d">Эмитент готовит проект инструмента. Клиент и получатель вносят правки, пока текст не устроит всех. Получатель заранее уточняет, что его банк примет инструмент в таком виде.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.3.x">Драфт инструмента</b></div>
+      </div></li>
+      <li><div class="j-n">04</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-c" data-i18n="role.c">Клиент</span><span class="chip r-i" data-i18n="role.i">Эмитент</span><span class="chip r-t" data-i18n="role.t">TATI-DAMU</span></div>
+        <h4 data-i18n="journey.4.t">Утверждение и договоры</h4>
+        <p data-i18n="journey.4.d">Клиент подписывает драфт с печатью, заключает договор с эмитентом и получает официальный инвойс. С TATI-DAMU — договор консультационных услуг.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.4.x">Подписанный драфт, договоры, инвойс</b></div>
+      </div></li>
+      <li><div class="j-n">05</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-c" data-i18n="role.c">Клиент</span><span class="chip r-i" data-i18n="role.i">Эмитент</span></div>
+        <h4 data-i18n="journey.5.t">Первая оплата — 50%</h4>
+        <p data-i18n="journey.5.d">Клиент оплачивает 50% напрямую эмитенту или банку по официальному инвойсу. Деньги не проходят через TATI-DAMU.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.5.x">Платёж по инвойсу</b></div>
+      </div></li>
+      <li><div class="j-n">06</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-i" data-i18n="role.i">Эмитент</span><span class="chip r-b" data-i18n="role.b">Банк получателя</span></div>
+        <h4 data-i18n="journey.6.t">Выпуск по SWIFT</h4>
+        <p data-i18n="journey.6.d">Банк-эмитент отправляет инструмент в банк получателя: MT760 для SBLC и гарантий, MT700 для аккредитива. Обычно 5–10 банковских дней. Клиент получает копию SWIFT.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.6.x">Сообщение SWIFT MT760 / MT700</b></div>
+      </div></li>
+      <li><div class="j-n">07</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-b" data-i18n="role.b">Банк получателя</span><span class="chip r-s" data-i18n="role.s">Получатель</span></div>
+        <h4 data-i18n="journey.7.t">Проверка и подтверждение</h4>
+        <p data-i18n="journey.7.d">Банк получателя проверяет подлинность по системе SWIFT и извещает получателя. С этого момента инструмент действует.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.7.x">Извещение банка получателя</b></div>
+      </div></li>
+      <li><div class="j-n">08</div><div class="j-body">
+        <div class="j-chips"><span class="chip r-c" data-i18n="role.c">Клиент</span><span class="chip r-i" data-i18n="role.i">Эмитент</span><span class="chip r-t" data-i18n="role.t">TATI-DAMU</span></div>
+        <h4 data-i18n="journey.8.t">Финальные расчёты</h4>
+        <p data-i18n="journey.8.d">Клиент оплачивает оставшиеся 50% эмитенту и вознаграждение TATI-DAMU. Торговая сделка запускается: продавец отгружает товар, инструмент действует до указанного срока.</p>
+        <div class="j-x"><span data-i18n="journey.x">Передаётся:</span> <b data-i18n="journey.8.x">Остаток 50% и вознаграждение</b></div>
+      </div></li>
+    </ol>
+    <div class="process-grid" style="margin-top:40px">
+      <div class="process-card">
+        <h3 data-i18n="finance.pay.h">Прозрачная оплата</h3>
+        <ul>
+          <li data-i18n="finance.pay.l1">Стоимость выпуска — по тарифу эмитента, в зависимости от суммы инструмента</li>
+          <li data-i18n="finance.pay.l2">Оплата напрямую эмитенту или банку по официальному инвойсу</li>
+          <li data-i18n="finance.pay.l3">50% — до выпуска, 50% — после получения инструмента вашим банком</li>
+          <li data-i18n="finance.pay.l4">Вознаграждение TATI-DAMU — только после успешного выпуска</li>
+        </ul>
+      </div>
+      <div class="process-card">
+        <h3 data-i18n="finance.guard.h">Что защищает клиента</h3>
+        <ul>
+          <li data-i18n="finance.guard.l1">Текст инструмента согласован всеми сторонами до оплаты</li>
+          <li data-i18n="finance.guard.l2">Подлинность проверяет банк получателя через SWIFT</li>
+          <li data-i18n="finance.guard.l3">Вторая половина оплаты — только после получения инструмента</li>
+          <li data-i18n="finance.guard.l4">Работаем только под реальные торговые сделки — без «монетизации», лизинга и программ доходности</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fin-disclaimer" data-i18n="finance.disclaimer">TATI-DAMU не является банком и не выпускает финансовые инструменты. Мы консультируем и сопровождаем сделку; инструменты выпускают банки и финансовые учреждения-партнёры после собственной проверки клиента. Выпуск возможен только после одобрения эмитентом.</p>
+    <div class="hero-actions" style="margin:32px 0 0"><a href="#contact" class="btn btn-primary" data-i18n="finance.cta">Обсудить инструмент для сделки</a></div>
   </div>
 </section>
 
@@ -508,6 +712,129 @@ const translations = {
     "contact.num":"07 — Контакты","contact.h2":"Обсудим вашу сделку","contact.p":"Опишите товар, объём и направление поставки — вернёмся с подходящими вариантами.",
     "contact.label.phone":"Телефон","contact.label.email":"Почта","contact.label.region":"Регион","contact.region":"Астана, Казахстан",
     "form.name":"Ваше имя","form.phone":"Телефон","form.comment":"Комментарий","form.submit":"Отправить заявку",
+    "nav.finance":"Финансирование",
+    "finance.num":"05 — Trade Finance",
+    "finance.h2":"Финансовые инструменты в экспортной сделке",
+    "finance.p":"Покупатель хочет получить товар до оплаты, продавец — деньги до отгрузки. Банковские инструменты снимают это противоречие: обязательство платить берёт на себя банк. Мы помогаем подобрать инструмент под сделку и организовать его выпуск через партнёрские финансовые учреждения.",
+    "finance.lc.h":"Документарный аккредитив",
+    "finance.lc.d":"Банк покупателя обязуется заплатить продавцу, как только тот представит документы об отгрузке, точно соответствующие условиям аккредитива. Банк проверяет документы, а не сам товар.",
+    "finance.lc.use":"Основной способ оплаты в экспорте зерна и масла",
+    "finance.lc.swift":"SWIFT MT700 · правила UCP 600",
+    "finance.sblc.h":"Резервный аккредитив",
+    "finance.sblc.d":"Страховка на случай неоплаты. Покупатель платит сам по контракту, а если не заплатил — продавец предъявляет требование и получает деньги от банка. Если сделка прошла нормально, SBLC просто не используется.",
+    "finance.sblc.use":"Позволяет работать без 100% предоплаты",
+    "finance.sblc.swift":"SWIFT MT760 · правила ISP98 или UCP 600",
+    "finance.bg.h":"Банковская гарантия",
+    "finance.bg.d":"Обязательство банка возместить убыток, если сторона не выполнила условие контракта. Виды: гарантия исполнения контракта (performance bond), гарантия возврата аванса, тендерная гарантия.",
+    "finance.bg.use":"Защищает покупателя: поставка, качество, аванс",
+    "finance.bg.swift":"SWIFT MT760 · правила URDG 758",
+    "finance.how.h":"Как проходит сделка с инструментом",
+    "finance.step1.t":"Контракт",
+    "finance.step1.d":"Стороны прописывают в контракте форму оплаты и гарантий: LC, SBLC, банковская гарантия или их сочетание.",
+    "finance.step2.t":"Заявка в банк",
+    "finance.step2.d":"Покупатель (заявитель) обращается в банк или финансовое учреждение. Эмитент проверяет клиента и согласует текст инструмента со всеми сторонами.",
+    "finance.step3.t":"Выпуск по SWIFT",
+    "finance.step3.d":"Банк-эмитент направляет инструмент в банк продавца: MT700 для аккредитива, MT760 для SBLC и гарантий. Банк продавца подтверждает подлинность.",
+    "finance.step4.t":"Отгрузка и документы",
+    "finance.step4.d":"Продавец отгружает товар и собирает документы: инвойс, коносамент или ж/д накладную, сертификаты происхождения и качества, фитосанитарный сертификат.",
+    "finance.step5.t":"Оплата",
+    "finance.step5.d":"По аккредитиву банк платит после проверки документов. По SBLC покупатель платит сам, а инструмент срабатывает только при неоплате.",
+    "finance.combo":"Частая связка: продавец даёт гарантию исполнения контракта, покупатель — аккредитив или SBLC на оплату. Так защищены обе стороны.",
+    "finance.prod.h":"Что применяется в наших товарных направлениях",
+    "finance.prod1.t":"Мука",
+    "finance.prod1.d":"Регулярные поставки партиями (вагоны, контейнеры) в Центральную Азию, Афганистан и на Ближний Восток. Вместо 100% предоплаты — SBLC в пользу продавца на серию поставок или револьверный аккредитив, который восстанавливается после каждой партии.",
+    "finance.prod2.t":"Пшеница и зерно",
+    "finance.prod2.d":"Крупные партии. Типичная схема — аккредитив с оплатой по предъявлении документов (LC at sight). Продавец со своей стороны может дать гарантию исполнения контракта.",
+    "finance.prod3.t":"Подсолнечное масло",
+    "finance.prod3.d":"Аккредитив или SBLC на оплату. Для долгосрочных контрактов — револьверный аккредитив на серию поставок, для покупателя — гарантия поставки и качества.",
+    "finance.work.h":"Как мы работаем с вами",
+    "finance.work1.t":"Анализ сделки",
+    "finance.work1.d":"Изучаем контракт, сумму, стороны и подбираем подходящий инструмент.",
+    "finance.work2.t":"Документы для проверки",
+    "finance.work2.d":"Заявка, текст инструмента (если есть), контракт или проформа-инвойс, регистрационные документы компании, список акционеров и копии паспортов, подтверждение адреса. Для сумм свыше 10 млн USD — банковские выписки за 6 месяцев.",
+    "finance.work3.t":"Согласование текста",
+    "finance.work3.d":"Проект инструмента согласуют все стороны сделки до выпуска.",
+    "finance.work4.t":"Выпуск",
+    "finance.work4.d":"Инструмент выпускается банком-эмитентом по SWIFT, обычно в течение 5–10 банковских дней.",
+    "finance.pay.h":"Прозрачная оплата",
+    "finance.pay.l1":"Стоимость выпуска — по тарифу эмитента, в зависимости от суммы инструмента",
+    "finance.pay.l2":"Оплата напрямую эмитенту или банку по официальному инвойсу",
+    "finance.pay.l3":"50% — до выпуска, 50% — после получения инструмента вашим банком",
+    "finance.pay.l4":"Вознаграждение TATI-DAMU — только после успешного выпуска",
+    "finance.pay.note":"Работаем только с инструментами под реальные торговые сделки. Запросы на «монетизацию», лизинг инструментов и программы доходности не рассматриваем.",
+    "finance.disclaimer":"TATI-DAMU не является банком и не выпускает финансовые инструменты. Мы консультируем и сопровождаем сделку; инструменты выпускают банки и финансовые учреждения-партнёры после собственной проверки клиента. Выпуск возможен только после одобрения эмитентом.",
+    "finance.cta":"Обсудить инструмент для сделки",
+    "role.c":"Клиент",
+    "role.t":"TATI-DAMU",
+    "role.i":"Эмитент",
+    "role.b":"Банк получателя",
+    "role.s":"Получатель",
+    "finance.parties.h":"Участники и их обязательства",
+    "finance.parties.p":"В каждой сделке с инструментом пять сторон. У каждой — своя зона ответственности, закреплённая в договорах и в тексте самого инструмента.",
+    "party.c.h":"Клиент (заявитель)",
+    "party.c.l1":"Даёт достоверные документы и сведения о сделке",
+    "party.c.l2":"Оплачивает выпуск по инвойсу эмитента",
+    "party.c.l3":"Исполняет свой торговый контракт",
+    "party.c.l4":"Если получатель предъявил требование — возмещает выплату эмитенту по условиям договора",
+    "party.t.h":"TATI-DAMU (консультант)",
+    "party.t.l1":"Анализирует сделку и подбирает инструмент",
+    "party.t.l2":"Собирает и передаёт документы эмитенту",
+    "party.t.l3":"Сопровождает согласование до выпуска",
+    "party.t.l4":"Не принимает деньги за выпуск и хранит конфиденциальность",
+    "party.i.h":"Финансовое учреждение и банк-эмитент",
+    "party.i.l1":"Проводит проверку клиента (KYC / AML)",
+    "party.i.l2":"Готовит проект текста, договор и официальный инвойс",
+    "party.i.l3":"Выпускает инструмент по SWIFT",
+    "party.i.l4":"Несёт безотзывное обязательство заплатить, если условия инструмента выполнены",
+    "party.b.h":"Банк получателя",
+    "party.b.l1":"Принимает сообщение SWIFT",
+    "party.b.l2":"Проверяет подлинность инструмента",
+    "party.b.l3":"Извещает получателя",
+    "party.b.l4":"По аккредитиву — проверяет документы и передаёт их на оплату",
+    "party.s.h":"Получатель (продавец)",
+    "party.s.l1":"Заранее согласует текст инструмента",
+    "party.s.l2":"Исполняет контракт: поставка, документы",
+    "party.s.l3":"При неоплате или неисполнении — предъявляет требование с документами, указанными в инструменте",
+    "flows.doc.k":"Документы",
+    "flows.doc.v":"Клиент → TATI-DAMU → Эмитент",
+    "flows.money.k":"Деньги",
+    "flows.money.v":"Клиент → Эмитент / банк, напрямую",
+    "flows.inst.k":"Инструмент",
+    "flows.inst.v":"Банк-эмитент → Банк получателя → Получатель (SWIFT)",
+    "finance.journey.h":"Выпуск инструмента: шаг за шагом",
+    "finance.journey.p":"Что происходит, кто участвует и что передаётся на каждом этапе.",
+    "journey.1.t":"Заявка и анализ сделки",
+    "journey.1.d":"Клиент описывает сделку: товар, сумму, стороны, нужный инструмент. TATI-DAMU проверяет логику сделки и подбирает тип и срок инструмента.",
+    "journey.1.x":"Контракт или проформа-инвойс",
+    "journey.2.t":"Пакет документов (KYC)",
+    "journey.2.d":"Клиент передаёт документы через TATI-DAMU. Эмитент проводит проверку соответствия требованиям (комплаенс).",
+    "journey.2.x":"Заявка, регистрационные документы, акционеры, паспорта, адрес; от 10 млн USD — выписки за 6 месяцев",
+    "journey.3.t":"Проект текста (драфт)",
+    "journey.3.d":"Эмитент готовит проект инструмента. Клиент и получатель вносят правки, пока текст не устроит всех. Получатель заранее уточняет, что его банк примет инструмент в таком виде.",
+    "journey.3.x":"Драфт инструмента",
+    "journey.4.t":"Утверждение и договоры",
+    "journey.4.d":"Клиент подписывает драфт с печатью, заключает договор с эмитентом и получает официальный инвойс. С TATI-DAMU — договор консультационных услуг.",
+    "journey.4.x":"Подписанный драфт, договоры, инвойс",
+    "journey.5.t":"Первая оплата — 50%",
+    "journey.5.d":"Клиент оплачивает 50% напрямую эмитенту или банку по официальному инвойсу. Деньги не проходят через TATI-DAMU.",
+    "journey.5.x":"Платёж по инвойсу",
+    "journey.6.t":"Выпуск по SWIFT",
+    "journey.6.d":"Банк-эмитент отправляет инструмент в банк получателя: MT760 для SBLC и гарантий, MT700 для аккредитива. Обычно 5–10 банковских дней. Клиент получает копию SWIFT.",
+    "journey.6.x":"Сообщение SWIFT MT760 / MT700",
+    "journey.7.t":"Проверка и подтверждение",
+    "journey.7.d":"Банк получателя проверяет подлинность по системе SWIFT и извещает получателя. С этого момента инструмент действует.",
+    "journey.7.x":"Извещение банка получателя",
+    "journey.8.t":"Финальные расчёты",
+    "journey.8.d":"Клиент оплачивает оставшиеся 50% эмитенту и вознаграждение TATI-DAMU. Торговая сделка запускается: продавец отгружает товар, инструмент действует до указанного срока.",
+    "journey.8.x":"Остаток 50% и вознаграждение",
+    "journey.x":"Передаётся:",
+    "finance.pay.h":"Прозрачная оплата",
+    "finance.guard.h":"Что защищает клиента",
+    "finance.guard.l1":"Текст инструмента согласован всеми сторонами до оплаты",
+    "finance.guard.l2":"Подлинность проверяет банк получателя через SWIFT",
+    "finance.guard.l3":"Вторая половина оплаты — только после получения инструмента",
+    "finance.guard.l4":"Работаем только под реальные торговые сделки — без «монетизации», лизинга и программ доходности",
+    "finance.how.h":"Как инструмент работает в торговой сделке",
     "nav.testimonial":"Отзывы",
     "testimonial.num":"05 — Отзывы","testimonial.h2":"Нам доверяют",
     "testimonial.quote":"Обратились с запросом на поставку продовольственных товаров — быстро подобрали поставщика и понятно объяснили каждый шаг сделки. Именно такого структурного подхода не хватало раньше.",
@@ -551,6 +878,129 @@ const translations = {
     "contact.num":"07 — Contact","contact.h2":"Let's discuss your deal","contact.p":"Tell us the product, volume and destination — we'll come back with suitable options.",
     "contact.label.phone":"Phone","contact.label.email":"Email","contact.label.region":"Region","contact.region":"Astana, Kazakhstan",
     "form.name":"Your name","form.phone":"Phone","form.comment":"Comment","form.submit":"Send request",
+    "nav.finance":"Finance",
+    "finance.num":"05 — Trade Finance",
+    "finance.h2":"Financial instruments in export trade",
+    "finance.p":"The buyer wants the goods before paying; the seller wants the money before shipping. Bank instruments resolve this: the bank takes on the payment obligation. We help select the right instrument for the deal and arrange its issuance through partner financial institutions.",
+    "finance.lc.h":"Letter of Credit (LC)",
+    "finance.lc.d":"The buyer's bank undertakes to pay the seller once the seller presents shipping documents that strictly comply with the terms of the credit. The bank checks the documents, not the goods.",
+    "finance.lc.use":"The main payment method in grain and oil exports",
+    "finance.lc.swift":"SWIFT MT700 · UCP 600 rules",
+    "finance.sblc.h":"Standby Letter of Credit (SBLC)",
+    "finance.sblc.d":"A safety net against non-payment. The buyer pays under the contract as usual; if they fail to pay, the seller makes a demand and is paid by the bank. If the deal goes smoothly, the SBLC is never drawn.",
+    "finance.sblc.use":"Makes it possible to trade without 100% prepayment",
+    "finance.sblc.swift":"SWIFT MT760 · ISP98 or UCP 600 rules",
+    "finance.bg.h":"Bank Guarantee (BG)",
+    "finance.bg.d":"A bank's undertaking to compensate a loss if a party fails to meet a contract obligation. Types: performance bond, advance payment guarantee, bid bond.",
+    "finance.bg.use":"Protects the buyer: delivery, quality, advance",
+    "finance.bg.swift":"SWIFT MT760 · URDG 758 rules",
+    "finance.how.h":"How a deal with an instrument works",
+    "finance.step1.t":"Contract",
+    "finance.step1.d":"The parties set the payment and security terms in the contract: LC, SBLC, bank guarantee or a combination.",
+    "finance.step2.t":"Application",
+    "finance.step2.d":"The buyer (applicant) applies to a bank or financial institution. The issuer reviews the client and agrees the wording with all parties.",
+    "finance.step3.t":"SWIFT issuance",
+    "finance.step3.d":"The issuing bank sends the instrument to the seller's bank: MT700 for an LC, MT760 for an SBLC or guarantee. The seller's bank authenticates it.",
+    "finance.step4.t":"Shipment & documents",
+    "finance.step4.d":"The seller ships the goods and prepares documents: invoice, bill of lading or railway bill, certificates of origin and quality, phytosanitary certificate.",
+    "finance.step5.t":"Payment",
+    "finance.step5.d":"Under an LC the bank pays after checking the documents. Under an SBLC the buyer pays directly; the instrument is drawn only on default.",
+    "finance.combo":"A common combination: the seller provides a performance bond, the buyer an LC or SBLC for payment. Both sides are protected.",
+    "finance.prod.h":"Instruments by product line",
+    "finance.prod1.t":"Wheat flour",
+    "finance.prod1.d":"Regular shipments in lots (wagons, containers) to Central Asia, Afghanistan and the Middle East. Instead of 100% prepayment — an SBLC in favour of the seller covering a series of shipments, or a revolving LC that reinstates after each lot.",
+    "finance.prod2.t":"Wheat & grain",
+    "finance.prod2.d":"Large lots. A typical structure is an LC payable at sight against documents. The seller may in turn provide a performance bond.",
+    "finance.prod3.t":"Sunflower oil",
+    "finance.prod3.d":"An LC or SBLC for payment. For long-term contracts — a revolving LC covering a series of deliveries; for the buyer — a delivery and quality guarantee.",
+    "finance.work.h":"How we work with you",
+    "finance.work1.t":"Deal review",
+    "finance.work1.d":"We review the contract, amount and parties and select the right instrument.",
+    "finance.work2.t":"KYC documents",
+    "finance.work2.d":"Application form, instrument wording (if any), contract or proforma invoice, company registration documents, list of shareholders with passport copies, proof of address. For amounts above USD 10 million — 6 months of bank statements.",
+    "finance.work3.t":"Draft approval",
+    "finance.work3.d":"The draft instrument is approved by all parties before issuance.",
+    "finance.work4.t":"Issuance",
+    "finance.work4.d":"The instrument is issued by the issuing bank via SWIFT, usually within 5–10 banking days.",
+    "finance.pay.h":"Transparent payment",
+    "finance.pay.l1":"Issuance fee — per the issuer’s tariff, depending on the instrument amount",
+    "finance.pay.l2":"Paid directly to the issuer or issuing bank against an official invoice",
+    "finance.pay.l3":"50% before issuance, 50% after your bank receives the instrument",
+    "finance.pay.l4":"TATI-DAMU’s fee is payable only after successful issuance",
+    "finance.pay.note":"We work only with instruments backed by real trade transactions. We do not consider requests for “monetization”, instrument leasing or yield programs.",
+    "finance.disclaimer":"TATI-DAMU is not a bank and does not issue financial instruments. We advise on and support the transaction; instruments are issued by partner banks and financial institutions following their own client due diligence. Issuance is subject to the issuer’s approval.",
+    "finance.cta":"Discuss an instrument for your deal",
+    "role.c":"Client",
+    "role.t":"TATI-DAMU",
+    "role.i":"Issuer",
+    "role.b":"Beneficiary bank",
+    "role.s":"Beneficiary",
+    "finance.parties.h":"Parties and their obligations",
+    "finance.parties.p":"Every instrument deal involves five parties. Each has its own responsibilities, fixed in the agreements and in the instrument’s wording.",
+    "party.c.h":"Client (applicant)",
+    "party.c.l1":"Provides accurate documents and deal information",
+    "party.c.l2":"Pays the issuance fee against the issuer’s invoice",
+    "party.c.l3":"Performs under its trade contract",
+    "party.c.l4":"If the beneficiary makes a demand — reimburses the issuer under the agreement",
+    "party.t.h":"TATI-DAMU (advisor)",
+    "party.t.l1":"Reviews the deal and selects the instrument",
+    "party.t.l2":"Collects and submits documents to the issuer",
+    "party.t.l3":"Supports the draft approval through to issuance",
+    "party.t.l4":"Never handles issuance funds; keeps all information confidential",
+    "party.i.h":"Financial institution & issuing bank",
+    "party.i.l1":"Runs client due diligence (KYC / AML)",
+    "party.i.l2":"Prepares the draft wording, agreement and official invoice",
+    "party.i.l3":"Issues the instrument via SWIFT",
+    "party.i.l4":"Holds an irrevocable obligation to pay when the instrument’s terms are met",
+    "party.b.h":"Beneficiary’s bank",
+    "party.b.l1":"Receives the SWIFT message",
+    "party.b.l2":"Authenticates the instrument",
+    "party.b.l3":"Advises the beneficiary",
+    "party.b.l4":"Under an LC — checks documents and presents them for payment",
+    "party.s.h":"Beneficiary (seller)",
+    "party.s.l1":"Approves the instrument wording in advance",
+    "party.s.l2":"Performs the contract: delivery, documents",
+    "party.s.l3":"On non-payment or default — makes a demand with the documents the instrument requires",
+    "flows.doc.k":"Documents",
+    "flows.doc.v":"Client → TATI-DAMU → Issuer",
+    "flows.money.k":"Funds",
+    "flows.money.v":"Client → Issuer / bank, directly",
+    "flows.inst.k":"Instrument",
+    "flows.inst.v":"Issuing bank → Beneficiary bank → Beneficiary (SWIFT)",
+    "finance.journey.h":"Instrument issuance: step by step",
+    "finance.journey.p":"What happens, who is involved and what is handed over at each stage.",
+    "journey.1.t":"Request & deal review",
+    "journey.1.d":"The client describes the deal: goods, amount, parties, the instrument needed. TATI-DAMU checks the deal logic and selects the instrument type and tenor.",
+    "journey.1.x":"Contract or proforma invoice",
+    "journey.2.t":"Document pack (KYC)",
+    "journey.2.d":"The client submits documents through TATI-DAMU. The issuer runs its compliance review.",
+    "journey.2.x":"Application, registration documents, shareholders, passports, address; above USD 10M — 6 months of statements",
+    "journey.3.t":"Draft wording",
+    "journey.3.d":"The issuer prepares the draft. The client and the beneficiary request changes until everyone agrees. The beneficiary confirms in advance that its bank will accept the wording.",
+    "journey.3.x":"Draft instrument",
+    "journey.4.t":"Approval & agreements",
+    "journey.4.d":"The client signs and stamps the draft, signs the agreement with the issuer and receives the official invoice. With TATI-DAMU — an advisory services agreement.",
+    "journey.4.x":"Signed draft, agreements, invoice",
+    "journey.5.t":"First payment — 50%",
+    "journey.5.d":"The client pays 50% directly to the issuer or issuing bank against the official invoice. Funds never pass through TATI-DAMU.",
+    "journey.5.x":"Payment against invoice",
+    "journey.6.t":"SWIFT issuance",
+    "journey.6.d":"The issuing bank sends the instrument to the beneficiary’s bank: MT760 for an SBLC or guarantee, MT700 for an LC. Usually 5–10 banking days. The client receives the SWIFT copy.",
+    "journey.6.x":"SWIFT MT760 / MT700 message",
+    "journey.7.t":"Authentication & confirmation",
+    "journey.7.d":"The beneficiary’s bank authenticates the message through SWIFT and advises the beneficiary. From this moment the instrument is in force.",
+    "journey.7.x":"Advice from the beneficiary’s bank",
+    "journey.8.t":"Final settlement",
+    "journey.8.d":"The client pays the remaining 50% to the issuer and TATI-DAMU’s fee. The trade goes ahead: the seller ships, the instrument stays valid until expiry.",
+    "journey.8.x":"Remaining 50% and fee",
+    "journey.x":"Handed over:",
+    "finance.pay.h":"Transparent payment",
+    "finance.guard.h":"What protects the client",
+    "finance.guard.l1":"The wording is approved by all parties before any payment",
+    "finance.guard.l2":"Authenticity is verified by the beneficiary’s bank via SWIFT",
+    "finance.guard.l3":"The second half is paid only after the instrument is received",
+    "finance.guard.l4":"Real trade transactions only — no “monetization”, leasing or yield programs",
+    "finance.how.h":"How an instrument works in a trade deal",
     "nav.testimonial":"Reviews",
     "testimonial.num":"05 — Testimonials","testimonial.h2":"Trusted by our clients",
     "testimonial.quote":"We came with a request to supply food products — they quickly matched us with a supplier and clearly explained every step of the deal. That's exactly the structured approach we were missing before.",
